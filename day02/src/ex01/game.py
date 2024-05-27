@@ -19,7 +19,7 @@ class Game(object):
 
     def top3(self):
         print('=== TOP-3 ===')
-        for player in self.registry.most_common(len(self.registry)):
+        for player in self.registry.most_common(3):
             player_type = PlayerType.extract_name_from_id(player[0])
             print(f'{player_type.name.title()} - {player[1]}')
 

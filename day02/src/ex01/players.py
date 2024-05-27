@@ -151,7 +151,7 @@ class Detective(Player):
             if res == Result.ONLY_I_COOPERATE or res == Result.BOTH_CHEAT:
                 self.flag_cheat = True
         else:
-            if not self.flag_cheat:
+            if self.flag_cheat:
                 self.step = Choice.CHEAT
             else:
                 if res == Result.BOTH_COOPERATE or res == Result.ONLY_I_CHEAT:
